@@ -1,10 +1,12 @@
 ---
-layout: default
-title: Amulya Saxena
 ---
+layout: default
+title: Home
+---
+
 # Hey, I’m Amulya 👋
 
-I’m a Data Scientist focused on **agentic AI systems**, end to end pipelines, and ML workflows in production.
+I’m a Data Scientist focused on **agentic AI systems**, end-to-end pipelines, and ML workflows in production.
 
 I work at the intersection of:
 
@@ -13,21 +15,22 @@ I work at the intersection of:
 - Sometimes oceans
 
 Previously, I:
-
-- Reinforcement learning based trading algorithm for DJI and S&P
-- Built agentic workflows with Google ADK & Gemini
-- Designed ML systems for security & finance
-- Won NumHack 2024 with a coral bleaching forecasting system
+- Built reinforcement-learning trading strategies for DJI & S&P
+- Designed agentic workflows with Google ADK & Gemini
+- Developed ML systems for security & finance
+- Won NumHack 2024 with a coral bleaching forecasting model
 
 I’m actively exploring:
-
 - AI Engineering
-- Multi Agentic Systems
+- Multi-Agent Architectures
+- Offline-first AI
 
 ---
 
 ### Let’s build something together
 
-**Email:** examulya@gmail.com
-**GitHub:** xlumzee
+**Email:** examulya@gmail.com  
+**GitHub:** xlumzee  
 **LinkedIn:** amulyasaxena
+
+---
