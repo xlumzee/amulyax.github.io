@@ -2,13 +2,13 @@
 /* THEME VARIABLES */
 /* ============================= */
 
-:root {
+html {
   --bg: #ffffff;
   --fg: #161616;
   --link: #0055cc;
 }
 
-.dark {
+html.dark {
   --bg: #111111;
   --fg: #e8e8e8;
   --link: #82aaff;
