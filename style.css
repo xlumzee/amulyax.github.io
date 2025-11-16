@@ -1,21 +1,53 @@
-/* Typography + layout */
+/* ============================= */
+/* THEME VARIABLES */
+/* ============================= */
+
+:root {
+  --bg: #ffffff;
+  --fg: #161616;
+  --link: #0055cc;
+}
+
+.dark {
+  --bg: #111111;
+  --fg: #e8e8e8;
+  --link: #82aaff;
+}
+
+/* ============================= */
+/* GLOBAL STYLES */
+/* ============================= */
+
 body {
-  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, Helvetica, Arial, sans-serif;
-  color: #161616;
+  background: var(--bg);
+  color: var(--fg);
+  font-family:
+    ui-sans-serif,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
   max-width: 760px;
   margin: 0 auto;
   padding: 3rem 1.25rem;
   line-height: 1.7;
   font-size: 17px;
+  transition: background 0.25s ease, color 0.25s ease;
 }
 
-/* Header Nav */
+/* ============================= */
+/* NAVIGATION */
+/* ============================= */
+
 nav {
   margin-bottom: 2.5rem;
   display: flex;
   gap: 1.2rem;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 nav a {
@@ -23,14 +55,36 @@ nav a {
   text-transform: uppercase;
   letter-spacing: 0.4px;
   text-decoration: none;
-  color: #555;
+  color: inherit;
+  opacity: 0.75;
 }
 
 nav a:hover {
-  color: #000;
+  opacity: 1;
 }
 
-/* Headings */
+/* ============================= */
+/* DARK / LIGHT TOGGLE */
+/* ============================= */
+
+#theme-toggle {
+  margin-left: auto;
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-size: 16px;
+  padding: 2px 6px;
+  opacity: 0.75;
+}
+
+#theme-toggle:hover {
+  opacity: 1;
+}
+
+/* ============================= */
+/* HEADINGS */
+/* ============================= */
+
 h1 {
   font-size: 2.4rem;
   margin-bottom: 1.4rem;
@@ -44,28 +98,36 @@ h2 {
   margin-bottom: 1rem;
 }
 
-/* Paragraph spacing */
+/* ============================= */
+/* TEXT + LISTS */
+/* ============================= */
+
 p,
 li {
   margin-bottom: 0.75rem;
 }
 
-/* Bold list markers */
 ul {
   list-style: disc;
   padding-left: 1.4rem;
 }
 
-/* Small caps section separators */
+/* ============================= */
+/* HORIZONTAL RULE */
+/* ============================= */
+
 hr {
   border: none;
   border-top: 1px solid #ddd;
   margin: 2.5rem 0;
 }
 
-/* Links */
+/* ============================= */
+/* LINKS */
+/* ============================= */
+
 a {
-  color: #0055cc;
+  color: var(--link);
 }
 
 a:hover {
