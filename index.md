@@ -1,5 +1,4 @@
 ---
----
 layout: default
 title: Home
 ---
@@ -34,5 +33,3 @@ I’m actively exploring:
 **Email:** examulya@gmail.com  
 **GitHub:** xlumzee  
 **LinkedIn:** amulyasaxena
-
----
