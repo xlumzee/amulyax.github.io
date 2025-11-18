@@ -3,8 +3,6 @@
 <head>
   <meta charset="utf-8">
   <title>{{ page.title }} | {{ site.title }}</title>
-</head>
-
   <link rel="stylesheet" href="/assets/style.css">
 </head>
 
@@ -16,30 +14,30 @@
     <a href="/list100">List 100</a>
     <a href="/scuba">Scuba</a>
     <a href="/contact">Contact</a>
+
     <!-- Theme Toggle -->
-  <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+    <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
   </nav>
 
   <main>
     {{ content }}
   </main>
 
-  <link rel="stylesheet" href="/assets/style.css">
   <script>
-  const toggleButton = document.getElementById("theme-toggle");
-  const currentTheme = localStorage.getItem("theme");
+    const toggleButton = document.getElementById("theme-toggle");
+    const currentTheme = localStorage.getItem("theme");
 
-  if (currentTheme === "dark") {
-    document.documentElement.classList.add("dark");
-    toggleButton.textContent = "☀️";
-  }
+    if (currentTheme === "dark") {
+      document.documentElement.classList.add("dark");
+      toggleButton.textContent = "☀️";
+    }
 
-  toggleButton.addEventListener("click", () => {
-    document.documentElement.classList.toggle("dark");
-    const isDark = document.documentElement.classList.contains("dark");
-    localStorage.setItem("theme", isDark ? "dark" : "light");
-    toggleButton.textContent = isDark ? "☀️" : "🌙";
-  });
-</script>
+    toggleButton.addEventListener("click", () => {
+      document.documentElement.classList.toggle("dark");
+      const isDark = document.documentElement.classList.contains("dark");
+      localStorage.setItem("theme", isDark ? "dark" : "light");
+      toggleButton.textContent = isDark ? "☀️" : "🌙";
+    });
+  </script>
 </body>
 </html>
