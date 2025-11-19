@@ -4,9 +4,25 @@
   <meta charset="utf-8">
   <title>{{ page.title }} | {{ site.title }}</title>
   <link rel="stylesheet" href="/assets/style.css">
+  <style>
+    .profile-container {
+      position: absolute;
+      top: 40px;
+      right: 40px;
+    }
+    .profile-img {
+      width: 160px;
+      height: 160px;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+  </style>
 </head>
 
 <body>
+  <div class="profile-container">
+    <img src="/assets/profile.jpg" alt="Amulya Saxena" class="profile-img">
+  </div>
   <nav>
     <a href="/">Home</a>
     <a href="/projects">Projects</a>
