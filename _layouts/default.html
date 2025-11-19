@@ -4,80 +4,47 @@
   <meta charset="utf-8">
   <title>{{ page.title }} | {{ site.title }}</title>
   <link rel="stylesheet" href="/assets/style.css">
-  <style>
-    .profile-container {
-      position: fixed;
-      right: 60px;
-      top: 120px;
-    }
-    .profile-img {
-      width: 220px;
-      height: 220px;
-      border-radius: 12px;
-      object-fit: cover;
-      box-shadow: 0 4px 14px rgba(0,0,0,0.15);
-    }
-    @media (max-width: 900px) {
-      .profile-container {
-        position: static;
-        margin-bottom: 2rem;
-        display: flex;
-        justify-content: center;
-      }
-      .profile-img {
-        width: 160px;
-        height: 160px;
-      }
-    }
-    .content-container {
-      max-width: 680px;
-      padding-right: 260px;
-    }
-    @media (max-width: 900px) {
-      .content-container {
-        padding-right: 0;
-      }
-    }
-  </style>
 </head>
 
 <body>
-  <div class="profile-container">
-    <img src="/assets/profile.jpg" alt="Amulya Saxena" class="profile-img">
+  <div class="page">
+    <!-- Header: name on left, nav on right -->
+    <header class="site-header">
+      <div class="header-left">
+        <a href="/" class="site-title">Amulya Saxena</a>
+      </div>
+      <nav class="header-right">
+        <a href="/projects">Projects</a>
+        <a href="/blog">Blog</a>
+        <a href="/list100">List 100</a>
+        <a href="/scuba">Scuba</a>
+        <a href="/contact">Contact</a>
+      </nav>
+    </header>
+
+    <div class="main-layout">
+      <!-- Main text column -->
+      <div class="content-column">
+        <main>
+          {{ content }}
+        </main>
+
+        <footer class="site-footer">
+          <p>© 2025 Amulya Saxena</p>
+          <p>
+            <a href="mailto:examulya@gmail.com">Email</a> ·
+            <a href="https://linkedin.com/in/amulyasaxena" target="_blank">LinkedIn</a> ·
+            <a href="https://instagram.com" target="_blank">Instagram</a> ·
+            <a href="https://medium.com/@amulyasaxena" target="_blank">Medium</a>
+          </p>
+        </footer>
+      </div>
+
+      <!-- Right-side profile image -->
+      <aside class="profile-container">
+        <img src="/assets/profile.jpg" alt="Amulya Saxena" class="profile-img">
+      </aside>
+    </div>
   </div>
-  <nav>
-    <a href="/">Home</a>
-    <a href="/projects">Projects</a>
-    <a href="/blog">Blog</a>
-    <a href="/list100">List 100</a>
-    <a href="/scuba">Scuba</a>
-    <a href="/contact">Contact</a>
-
-    <!-- Theme Toggle -->
-    <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
-  </nav>
-
-  <div class="content-container">
-  <main>
-    {{ content }}
-  </main>
-  </div>
-
-  <script>
-    const toggleButton = document.getElementById("theme-toggle");
-    const currentTheme = localStorage.getItem("theme");
-
-    if (currentTheme === "dark") {
-      document.documentElement.classList.add("dark");
-      toggleButton.textContent = "☀️";
-    }
-
-    toggleButton.addEventListener("click", () => {
-      document.documentElement.classList.toggle("dark");
-      const isDark = document.documentElement.classList.contains("dark");
-      localStorage.setItem("theme", isDark ? "dark" : "light");
-      toggleButton.textContent = isDark ? "☀️" : "🌙";
-    });
-  </script>
 </body>
 </html>
