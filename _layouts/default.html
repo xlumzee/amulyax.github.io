@@ -6,15 +6,37 @@
   <link rel="stylesheet" href="/assets/style.css">
   <style>
     .profile-container {
-      position: absolute;
-      top: 40px;
-      right: 40px;
+      position: fixed;
+      right: 60px;
+      top: 120px;
     }
     .profile-img {
-      width: 160px;
-      height: 160px;
-      border-radius: 8px;
+      width: 220px;
+      height: 220px;
+      border-radius: 12px;
       object-fit: cover;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+    }
+    @media (max-width: 900px) {
+      .profile-container {
+        position: static;
+        margin-bottom: 2rem;
+        display: flex;
+        justify-content: center;
+      }
+      .profile-img {
+        width: 160px;
+        height: 160px;
+      }
+    }
+    .content-container {
+      max-width: 680px;
+      padding-right: 260px;
+    }
+    @media (max-width: 900px) {
+      .content-container {
+        padding-right: 0;
+      }
     }
   </style>
 </head>
@@ -35,9 +57,11 @@
     <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
   </nav>
 
+  <div class="content-container">
   <main>
     {{ content }}
   </main>
+  </div>
 
   <script>
     const toggleButton = document.getElementById("theme-toggle");
